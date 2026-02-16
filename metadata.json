@@ -1,0 +1,5 @@
+{
+  "name": "GitWiki Builder",
+  "description": "Transform any GitHub repository into a beautiful, structured wiki documentation site powered by AI.",
+  "requestFramePermissions": []
+}

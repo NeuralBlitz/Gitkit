@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitWiki Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <!-- Highlight.js for Code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+
+    <style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Custom styles for the markdown output */
+        .markdown-content img { @apply rounded-xl shadow-md border border-slate-200 my-6 mx-auto block max-w-full; }
+        .markdown-content table { @apply w-full border-collapse my-6 text-sm; }
+        .markdown-content th { @apply bg-slate-50 border border-slate-200 px-4 py-2 text-left font-semibold text-slate-700; }
+        .markdown-content td { @apply border border-slate-200 px-4 py-2 text-slate-600; }
+        .markdown-content pre { @apply !bg-slate-900 !p-0 !rounded-lg overflow-hidden my-6; }
+        .markdown-content code { @apply font-mono text-sm; }
+        .markdown-content p code { @apply bg-slate-100 text-pink-600 px-1.5 py-0.5 rounded border border-slate-200; }
+        
+        /* Typography overrides for react-markdown */
+        .markdown-content h1 { @apply text-3xl font-bold mb-6 mt-10 text-slate-900 border-b pb-4 border-slate-100; }
+        .markdown-content h2 { @apply text-2xl font-semibold mb-4 mt-8 text-slate-800 flex items-center gap-2; }
+        .markdown-content h3 { @apply text-xl font-medium mb-3 mt-6 text-slate-700; }
+        .markdown-content p { @apply mb-4 leading-relaxed text-slate-600; }
+        .markdown-content ul { @apply list-disc pl-6 mb-4 space-y-2 text-slate-600; }
+        .markdown-content ol { @apply list-decimal pl-6 mb-4 space-y-2 text-slate-600; }
+        .markdown-content blockquote { @apply border-l-4 border-indigo-200 bg-indigo-50/30 pl-6 py-1 italic text-slate-500 my-6 rounded-r-lg; }
+    </style>
+
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@1.35.0",
+    "react-markdown": "https://esm.sh/react-markdown@9.0.1",
+    "remark-gfm": "https://esm.sh/remark-gfm@4.0.0",
+    "remark-math": "https://esm.sh/remark-math@6.0.0",
+    "rehype-katex": "https://esm.sh/rehype-katex@7.0.0",
+    "rehype-highlight": "https://esm.sh/rehype-highlight@7.0.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+</body>
+</html>
